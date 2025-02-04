@@ -5,6 +5,7 @@ os.chdir(os.path.dirname(__file__))   # Elles permettent de se positionner dans 
 
 # Importez le module csv
 
+import csv
 
 
 # Nous avons des offres de stages and le fichier "Ex4 Emplois Reseautique.csv"
@@ -26,16 +27,12 @@ os.chdir(os.path.dirname(__file__))   # Elles permettent de se positionner dans 
 
 ficher_a_lire = os.path.join("csvs","Ex4 Emplois Reseautique.csv" )
 
-
-
-
-
-
-
-
-
-
-
+with open(ficher_a_lire, "r", encoding="utf-8") as fichier_lu :
+    csv_reader = csv.reader(fichier_lu, delimiter=';')
+    next(csv_reader)
+    for line in csv_reader:
+      if line[4] == 'Dec' or line[4] == 'Non déterminé' :
+            print(line)
 
 
 

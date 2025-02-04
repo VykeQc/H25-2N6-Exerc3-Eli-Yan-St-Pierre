@@ -37,8 +37,6 @@ with open(ficher_a_lire, "r", encoding="utf-8") as fichier_lu :
 
 
 
-
-
 # INSTRUCTIONS DÉTAILLÉES
 # Ouvrez en lecture le fichier "Ex4 Emplois Reseautique.csv", en utilisant l'encoding utf-8   
 # Lisez tout le contenu du fichier avec csv.reader() avec le delimiter=';'  
